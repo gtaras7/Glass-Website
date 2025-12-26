@@ -1,8 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { GlassCard } from './ui/GlassCard';
-import { Send, MapPin, Mail, Phone } from 'lucide-react';
+import { Send, MapPin, Mail, Check } from 'lucide-react';
 
 export const Contact: React.FC = () => {
+   const [isSubmitting, setIsSubmitting] = useState(false);
+   const [isSent, setIsSent] = useState(false);
+
+   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      setIsSubmitting(true);
+
+      const formData = new FormData(e.currentTarget);
+
+      try {
+         const response = await fetch("https://formsubmit.co/ajax/nextgenautomationn@gmail.com", {
+            method: "POST",
+            body: formData
+         });
+
+         if (response.ok) {
+            setIsSent(true);
+            (e.target as HTMLFormElement).reset();
+         } else {
+            alert("Something went wrong. Please try again.");
+         }
+      } catch (error) {
+         alert("Something went wrong. Please try again.");
+      } finally {
+         setIsSubmitting(false);
+      }
+   };
+
    return (
       <section id="contact" className="py-24 relative z-10 pb-32">
          <div className="container mx-auto px-6 max-w-5xl">
@@ -33,7 +61,7 @@ export const Contact: React.FC = () => {
                   </div>
 
                   {/* Form */}
-                  <form className="space-y-4" action="https://formsubmit.co/nextgenautomationn@gmail.com" method="POST">
+                  <form className="space-y-4" onSubmit={handleSubmit}>
                      <div>
                         <label className="block text-xs font-medium text-slate-500 dark:text-white/50 mb-1 ml-1">Name</label>
                         <input
@@ -42,6 +70,7 @@ export const Contact: React.FC = () => {
                            className="w-full bg-slate-50 dark:bg-black/20 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-white/30 focus:outline-none focus:border-cyan-500/50 focus:bg-white dark:focus:bg-black/40 transition-all shadow-inner"
                            placeholder="John Doe"
                            required
+                           disabled={isSubmitting || isSent}
                         />
                      </div>
                      <div>
@@ -52,6 +81,7 @@ export const Contact: React.FC = () => {
                            className="w-full bg-slate-50 dark:bg-black/20 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-white/30 focus:outline-none focus:border-cyan-500/50 focus:bg-white dark:focus:bg-black/40 transition-all shadow-inner"
                            placeholder="john@business.com"
                            required
+                           disabled={isSubmitting || isSent}
                         />
                      </div>
                      <div>
@@ -62,12 +92,26 @@ export const Contact: React.FC = () => {
                            className="w-full bg-slate-50 dark:bg-black/20 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-white/30 focus:outline-none focus:border-cyan-500/50 focus:bg-white dark:focus:bg-black/40 transition-all shadow-inner resize-none"
                            placeholder="I need a website that..."
                            required
+                           disabled={isSubmitting || isSent}
                         />
                      </div>
 
                      <div className="pt-2">
-                        <button type="submit" className="w-full py-4 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold flex items-center justify-center gap-2 shadow-lg shadow-blue-900/20 dark:shadow-blue-900/50 transition-all transform hover:-translate-y-1">
-                           Send Message <Send size={18} />
+                        <button
+                           type="submit"
+                           disabled={isSubmitting || isSent}
+                           className={`w-full py-4 rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg transition-all transform hover:-translate-y-1 ${isSent
+                                 ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-green-900/20'
+                                 : 'bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white shadow-blue-900/20 dark:shadow-blue-900/50'
+                              } ${isSubmitting ? 'opacity-80 cursor-wait' : ''}`}
+                        >
+                           {isSent ? (
+                              <>Message Sent <Check size={18} /></>
+                           ) : isSubmitting ? (
+                              <>Sending...</>
+                           ) : (
+                              <>Send Message <Send size={18} /></>
+                           )}
                         </button>
                      </div>
                   </form>
