@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { GlassCard } from './ui/GlassCard';
 import { Send, MapPin, Mail, Check } from 'lucide-react';
+import { useLanguage } from '../hooks/useLanguage';
 
 export const Contact: React.FC = () => {
+   const { t } = useLanguage();
    const [isSubmitting, setIsSubmitting] = useState(false);
    const [isSent, setIsSent] = useState(false);
 
@@ -38,10 +40,9 @@ export const Contact: React.FC = () => {
                <div className="grid md:grid-cols-2 gap-12">
                   {/* Info */}
                   <div>
-                     <h2 className="text-3xl font-display font-bold mb-6 text-slate-800 dark:text-white">Let's Automate Your Success</h2>
+                     <h2 className="text-3xl font-display font-bold mb-6 text-slate-800 dark:text-white">{t('contact.title')}</h2>
                      <p className="text-slate-600 dark:text-white/60 mb-8">
-                        Ready to upgrade your web presence or automate your workflow?
-                        Drop me a message. I'm available for local meetings in Thessaloniki or remote calls.
+                        {t('contact.description')}
                      </p>
 
                      <div className="space-y-4">
@@ -49,7 +50,7 @@ export const Contact: React.FC = () => {
                            <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-white/5 flex items-center justify-center border border-slate-200 dark:border-white/10">
                               <MapPin size={18} className="text-cyan-600 dark:text-cyan-400" />
                            </div>
-                           <span className="text-slate-700 dark:text-white/80">Thessaloniki, Greece</span>
+                           <span className="text-slate-700 dark:text-white/80">{t('contact.location')}</span>
                         </div>
                         <div className="flex items-center gap-4">
                            <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-white/5 flex items-center justify-center border border-slate-200 dark:border-white/10">
@@ -63,34 +64,34 @@ export const Contact: React.FC = () => {
                   {/* Form */}
                   <form className="space-y-4" onSubmit={handleSubmit}>
                      <div>
-                        <label className="block text-xs font-medium text-slate-500 dark:text-white/50 mb-1 ml-1">Name</label>
+                        <label className="block text-xs font-medium text-slate-500 dark:text-white/50 mb-1 ml-1">{t('contact.nameLabel')}</label>
                         <input
                            type="text"
                            name="name"
                            className="w-full bg-slate-50 dark:bg-black/20 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-white/30 focus:outline-none focus:border-cyan-500/50 focus:bg-white dark:focus:bg-black/40 transition-all shadow-inner"
-                           placeholder="John Doe"
+                           placeholder={t('contact.namePlaceholder')}
                            required
                            disabled={isSubmitting || isSent}
                         />
                      </div>
                      <div>
-                        <label className="block text-xs font-medium text-slate-500 dark:text-white/50 mb-1 ml-1">Email</label>
+                        <label className="block text-xs font-medium text-slate-500 dark:text-white/50 mb-1 ml-1">{t('contact.emailLabel')}</label>
                         <input
                            type="email"
                            name="email"
                            className="w-full bg-slate-50 dark:bg-black/20 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-white/30 focus:outline-none focus:border-cyan-500/50 focus:bg-white dark:focus:bg-black/40 transition-all shadow-inner"
-                           placeholder="john@business.com"
+                           placeholder={t('contact.emailPlaceholder')}
                            required
                            disabled={isSubmitting || isSent}
                         />
                      </div>
                      <div>
-                        <label className="block text-xs font-medium text-slate-500 dark:text-white/50 mb-1 ml-1">Message</label>
+                        <label className="block text-xs font-medium text-slate-500 dark:text-white/50 mb-1 ml-1">{t('contact.messageLabel')}</label>
                         <textarea
                            name="message"
                            rows={4}
                            className="w-full bg-slate-50 dark:bg-black/20 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-white/30 focus:outline-none focus:border-cyan-500/50 focus:bg-white dark:focus:bg-black/40 transition-all shadow-inner resize-none"
-                           placeholder="I need a website that..."
+                           placeholder={t('contact.messagePlaceholder')}
                            required
                            disabled={isSubmitting || isSent}
                         />
@@ -106,11 +107,11 @@ export const Contact: React.FC = () => {
                               } ${isSubmitting ? 'opacity-80 cursor-wait' : ''}`}
                         >
                            {isSent ? (
-                              <>Message Sent <Check size={18} /></>
+                              <>{t('contact.sentButton')} <Check size={18} /></>
                            ) : isSubmitting ? (
-                              <>Sending...</>
+                              <>{t('contact.sendingButton')}</>
                            ) : (
-                              <>Send Message <Send size={18} /></>
+                              <>{t('contact.sendButton')} <Send size={18} /></>
                            )}
                         </button>
                      </div>

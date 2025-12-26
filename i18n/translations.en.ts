@@ -1,0 +1,91 @@
+import { TranslationKeys } from './types';
+
+export const en: TranslationKeys = {
+  navbar: {
+    home: 'Home',
+    services: 'Services',
+    portfolio: 'Portfolio',
+    about: 'About',
+    contact: 'Contact',
+  },
+  hero: {
+    titlePart1: 'Building Smart Websites for',
+    titlePart2: '',
+    locationHighlight: 'Thessaloniki\'s',
+    titlePart3: 'Businesses',
+    description: 'I combine premium glass-morphic design with powerful n8n automation to save you time, reduce costs, and modernize your digital presence.',
+    cta: 'View My Work',
+  },
+  services: {
+    title: 'My Expertise',
+    subtitle: 'Bridging the gap between beautiful design and intelligent logic.',
+    webDesign: {
+      title: 'Premium Web Design',
+      description: 'Custom-coded, high-performance websites using React and Tailwind. No cookie-cutter templates—just pure, polished glassmorphism aesthetics tailored to your brand.',
+    },
+    automation: {
+      title: 'n8n Automation',
+      description: 'I connect your apps (Gmail, Slack, Sheets, CRM) to create seamless workflows. Save hundreds of hours by automating repetitive tasks like lead generation and invoicing.',
+    },
+    business: {
+      title: 'Business Solutions',
+      description: 'Digital strategy meets technical execution. From setting up your Google Business Profile to integrating ServiceNow workflows for larger operations.',
+    },
+  },
+  portfolio: {
+    title: 'Selected Work',
+    subtitle: 'A mix of visual design and invisible logic.',
+    websitesTab: 'Websites',
+    workflowsTab: 'n8n Workflows',
+    visitSite: 'Visit Site',
+    viewWorkflow: 'View Workflow',
+    timeSaved: 'Time Saved',
+    intellity: {
+      title: 'Intellity',
+      description: 'Sustainable technology platform combining cutting-edge AI, data analytics, and clean technology to solve environmental challenges.',
+    },
+    withoutSessions: {
+      title: 'Without Sessions',
+      description: 'Exclusive event platform featuring an immersive dark UI, countdown timers, and guest list management for underground music sessions.',
+    },
+    googleMaps: {
+      title: 'Monitor Google Map Reviews',
+      description: 'Automated sentiment analysis of reviews using GPT-4o, with real-time Telegram alerts and Pinecone vector storage.',
+    },
+    financialDoc: {
+      title: 'Financial Doc Extraction',
+      description: 'Automatically extracts key financial data from incoming Gmail attachments and organizes it into Google Sheets.',
+    },
+  },
+  about: {
+    title: 'Behind the Screen',
+    paragraph1: 'Hi, I\'m a developer based in Thessaloniki with a Business Computing background. I don\'t just build "pretty" websites; I build systems that work for you.',
+    paragraph2: 'My journey started with a fascination for how businesses operate. Now, I\'m channeling that into mastering ServiceNow and n8n to automate the boring stuff so you can focus on growth.',
+    credential1: 'BSc Business Computing',
+    credential2: 'Tennis & Football Fan 🎾⚽',
+    credential3: 'Future ServiceNow Architect',
+  },
+  contact: {
+    title: 'Let\'s Automate Your Success',
+    description: 'Ready to upgrade your web presence or automate your workflow? Drop me a message. I\'m available for local meetings in Thessaloniki or remote calls.',
+    location: 'Thessaloniki, Greece',
+    nameLabel: 'Name',
+    namePlaceholder: 'John Doe',
+    emailLabel: 'Email',
+    emailPlaceholder: 'john@business.com',
+    messageLabel: 'Message',
+    messagePlaceholder: 'I need a website that...',
+    sendButton: 'Send Message',
+    sendingButton: 'Sending...',
+    sentButton: 'Message Sent',
+  },
+  footer: {
+    tagline: 'Built with React & Glass',
+  },
+  meta: {
+    title: 'NextGen Automation & Design | Web & Automation Engineer Thessaloniki',
+    description: 'Premium web design and business automation solutions in Thessaloniki. Specializing in React, n8n workflows, and ServiceNow to streamline your business operations.',
+    keywords: 'Web Design Thessaloniki, Automation Engineer, n8n Developer, ServiceNow Architect, React Developer Greece, Business Automation, Digital Transformation',
+    ogDescription: 'Elevate your business with premium web design and intelligent automation. Expert in React, n8n, and ServiceNow.',
+  },
+};

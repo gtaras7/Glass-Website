@@ -2,8 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Code2, Cpu } from 'lucide-react';
 import { GlassCard } from './ui/GlassCard';
+import { useLanguage } from '../hooks/useLanguage';
 
 export const Hero: React.FC = () => {
+  const { t } = useLanguage();
   const scrollToPortfolio = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const element = document.getElementById('portfolio');
@@ -24,18 +26,18 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-7xl font-display font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-slate-900 via-blue-800 to-slate-600 dark:from-white dark:via-blue-100 dark:to-white/60">
-              Building Smart Websites for <br />
-              <span className="text-cyan-600 dark:text-cyan-400">Thessaloniki’s</span> Businesses
+              {t('hero.titlePart1')} <br />
+              <span className="text-cyan-600 dark:text-cyan-400">{t('hero.locationHighlight')}</span> {t('hero.titlePart3')}
             </h1>
           </motion.div>
           
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
             className="text-lg md:text-xl text-slate-600 dark:text-blue-100/70 max-w-lg"
           >
-            I combine premium glass-morphic design with powerful n8n automation to save you time, reduce costs, and modernize your digital presence.
+            {t('hero.description')}
           </motion.p>
 
           <motion.div 
@@ -56,7 +58,7 @@ export const Hero: React.FC = () => {
                 shadow-[0_0_20px_rgba(56,189,248,0.1)] dark:shadow-[0_0_20px_rgba(56,189,248,0.3)] cursor-pointer
               "
             >
-              View My Work
+              {t('hero.cta')}
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
           </motion.div>

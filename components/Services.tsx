@@ -1,23 +1,26 @@
 import React from 'react';
 import { GlassCard } from './ui/GlassCard';
 import { Palette, Share2, TrendingUp } from 'lucide-react';
+import { useLanguage } from '../hooks/useLanguage';
 
 export const Services: React.FC = () => {
+  const { t } = useLanguage();
+
   const services = [
     {
       icon: Palette,
-      title: "Premium Web Design",
-      description: "Custom-coded, high-performance websites using React and Tailwind. No cookie-cutter templates—just pure, polished glassmorphism aesthetics tailored to your brand."
+      title: t('services.webDesign.title'),
+      description: t('services.webDesign.description'),
     },
     {
       icon: Share2,
-      title: "n8n Automation",
-      description: "I connect your apps (Gmail, Slack, Sheets, CRM) to create seamless workflows. Save hundreds of hours by automating repetitive tasks like lead generation and invoicing.",
+      title: t('services.automation.title'),
+      description: t('services.automation.description'),
     },
     {
       icon: TrendingUp,
-      title: "Business Solutions",
-      description: "Digital strategy meets technical execution. From setting up your Google Business Profile to integrating ServiceNow workflows for larger operations.",
+      title: t('services.business.title'),
+      description: t('services.business.description'),
     }
   ];
 
@@ -26,10 +29,10 @@ export const Services: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-display font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-purple-600 dark:from-cyan-300 dark:to-purple-400">
-            My Expertise
+            {t('services.title')}
           </h2>
           <p className="text-slate-600 dark:text-blue-100/60 max-w-xl mx-auto">
-            Bridging the gap between beautiful design and intelligent logic.
+            {t('services.subtitle')}
           </p>
         </div>
 
