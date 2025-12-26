@@ -28,22 +28,25 @@ function App() {
 
   return (
     <div className={isDark ? 'dark' : ''}>
-      <div className="relative font-sans antialiased text-slate-900 dark:text-white selection:bg-cyan-500/30 bg-slate-50 dark:bg-[#050511] transition-colors duration-500 min-h-screen">
+      <div className="relative font-sans antialiased text-slate-900 dark:text-white selection:bg-cyan-500/30 transition-colors duration-500 min-h-screen">
         <Cursor />
         <Background isDark={isDark} />
-        <Navbar isDark={isDark} toggleTheme={toggleTheme} />
-        
-        <main className="flex flex-col">
-          <Hero />
-          <Services />
-          <Portfolio />
-          <About />
-          <Contact />
-        </main>
 
-        <footer className="py-8 text-center text-slate-500 dark:text-white/20 text-sm relative z-10 border-t border-slate-200 dark:border-white/5 transition-colors duration-500">
-          <p>© {new Date().getFullYear()} NextGen Automation. Built with React & Glass.</p>
-        </footer>
+        <div className="relative" style={{ zIndex: 10 }}>
+          <Navbar isDark={isDark} toggleTheme={toggleTheme} />
+
+          <main className="flex flex-col">
+            <Hero />
+            <Services />
+            <Portfolio />
+            <About />
+            <Contact />
+          </main>
+
+          <footer className="py-8 text-center text-slate-500 dark:text-white/20 text-sm border-t border-slate-200 dark:border-white/5 transition-colors duration-500">
+            <p>© {new Date().getFullYear()} NextGen Automation. Built with React & Glass.</p>
+          </footer>
+        </div>
       </div>
     </div>
   );

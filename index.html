@@ -87,20 +87,46 @@
       .light ::-webkit-scrollbar-thumb:hover {
         background: rgba(0, 0, 0, 0.4);
       }
+
+      /* Aurora Orb Animations */
+      @keyframes float-1 {
+        0%, 100% { transform: translate(0, 0); }
+        50% { transform: translate(50px, 80px); }
+      }
+
+      @keyframes float-2 {
+        0%, 100% { transform: translate(0, 0); }
+        50% { transform: translate(-60px, -40px); }
+      }
+
+      @keyframes float-3 {
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        50% { transform: translate(30px, -30px) scale(1.1); }
+      }
+
+      /* Mobile Responsive Orbs - Reduce blur and size */
+      @media (max-width: 768px) {
+        .orb {
+          filter: blur(60px) !important;
+          transform: scale(0.5);
+        }
+        .orb-1 {
+          width: 250px !important;
+          height: 250px !important;
+        }
+        .orb-2 {
+          width: 300px !important;
+          height: 300px !important;
+        }
+        .orb-3 {
+          width: 200px !important;
+          height: 200px !important;
+        }
+      }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "framer-motion": "https://esm.sh/framer-motion@^12.23.26",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
-  }
-}
-</script>
-</head>
+  </head>
   <body>
     <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
