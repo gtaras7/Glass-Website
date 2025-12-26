@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>NextGen Automation & Design | Web & Automation Engineer Thessaloniki</title>
+    <meta name="description" content="Premium web design and business automation solutions in Thessaloniki. Specializing in React, n8n workflows, and ServiceNow to streamline your business operations." />
+    <meta name="keywords" content="Web Design Thessaloniki, Automation Engineer, n8n Developer, ServiceNow Architect, React Developer Greece, Business Automation, Digital Transformation" />
+    <meta name="author" content="NextGen Automation" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="NextGen Automation & Design | Web & Automation Engineer Thessaloniki" />
+    <meta property="og:description" content="Elevate your business with premium web design and intelligent automation. Expert in React, n8n, and ServiceNow." />
+    <meta property="og:image" content="https://picsum.photos/1200/630?grayscale" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="NextGen Automation & Design | Web & Automation Engineer Thessaloniki" />
+    <meta property="twitter:description" content="Elevate your business with premium web design and intelligent automation. Expert in React, n8n, and ServiceNow." />
+    <meta property="twitter:image" content="https://picsum.photos/1200/630?grayscale" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Outfit', 'sans-serif'],
+              display: ['Space Grotesk', 'sans-serif'],
+            },
+            colors: {
+              glass: {
+                border: 'rgba(255, 255, 255, 0.2)',
+                surface: 'rgba(255, 255, 255, 0.05)',
+                highlight: 'rgba(255, 255, 255, 0.1)',
+              }
+            },
+            animation: {
+              'blob': 'blob 10s infinite',
+            },
+            keyframes: {
+              blob: {
+                '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                '100%': { transform: 'translate(0px, 0px) scale(1)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      /* Base styles handled by React/Tailwind now, but keep scrollbar styling */
+      body {
+        overflow-x: hidden;
+      }
+      /* Custom Scrollbar - Dark Mode Default */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #050511;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.4);
+      }
+
+      /* Light Mode Scrollbar */
+      .light ::-webkit-scrollbar-track {
+        background: #f3f4f6;
+      }
+      .light ::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.2);
+      }
+      .light ::-webkit-scrollbar-thumb:hover {
+        background: rgba(0, 0, 0, 0.4);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "framer-motion": "https://esm.sh/framer-motion@^12.23.26",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
