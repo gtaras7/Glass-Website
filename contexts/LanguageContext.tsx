@@ -62,7 +62,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
       }
     }
 
-    return value as string || key;
+    return (value !== undefined && value !== null) ? value as string : key;
   };
 
   const value: LanguageContextValue = {
