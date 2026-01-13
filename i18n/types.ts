@@ -56,6 +56,14 @@ export interface TranslationKeys {
       title: string;
       description: string;
     };
+    rollySkg: {
+      title: string;
+      description: string;
+    };
+    eaConstructions: {
+      title: string;
+      description: string;
+    };
   };
   about: {
     title: string;

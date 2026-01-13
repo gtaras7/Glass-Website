@@ -56,6 +56,14 @@ export const en: TranslationKeys = {
       title: 'Financial Doc Extraction',
       description: 'Automatically extracts key financial data from incoming Gmail attachments and organizes it into Google Sheets.',
     },
+    rollySkg: {
+      title: 'Rolly SKG',
+      description: 'A modern, vibrant website for a local food brand, featuring a clean product showcase and brand storytelling.',
+    },
+    eaConstructions: {
+      title: 'EA Constructions',
+      description: 'Professional portfolio website for a construction company, showcasing projects and services with a clean, corporate design.',
+    },
   },
   about: {
     title: 'Behind the Screen',

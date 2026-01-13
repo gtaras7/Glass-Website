@@ -27,6 +27,24 @@ export const Portfolio: React.FC = () => {
       image: '/without-sessions.jpg',
       technologies: ['React', 'Netlify', 'Framer Motion'],
       link: 'https://withoutsessions.netlify.app/'
+    },
+    {
+      id: '3',
+      title: t('portfolio.rollySkg.title'),
+      description: t('portfolio.rollySkg.description'),
+      category: 'web',
+      image: '/rolly-skg-logo.jpg',
+      technologies: ['React', 'Netlify', 'Tailwind'],
+      link: 'https://rollyskg.netlify.app/'
+    },
+    {
+      id: '4',
+      title: t('portfolio.eaConstructions.title'),
+      description: t('portfolio.eaConstructions.description'),
+      category: 'web',
+      image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop',
+      technologies: ['React', 'Netlify', 'Tailwind'],
+      link: 'https://eaconstructions.netlify.app/'
     }
   ];
 
