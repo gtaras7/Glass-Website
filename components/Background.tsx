@@ -17,7 +17,7 @@ export const Background: React.FC<BackgroundProps> = ({ isDark }) => {
 
     let wWidth = window.innerWidth;
     let wHeight = window.innerHeight;
-    
+
     canvas.width = wWidth;
     canvas.height = wHeight;
 
@@ -36,7 +36,7 @@ export const Background: React.FC<BackgroundProps> = ({ isDark }) => {
           // For Light mode: faint black. For Dark mode: faint white/grey.
           // Let's stick to the original implementation which was faint black (0x0f000000) - this works well in overlay mode on dark.
           // On light mode overlay, black noise darkens.
-          buffer32[i] = 0x0f000000; 
+          buffer32[i] = 0x0f000000;
         }
       }
       noiseData.push(idata);
@@ -96,11 +96,11 @@ export const Background: React.FC<BackgroundProps> = ({ isDark }) => {
             width: '700px',
             height: '700px',
             background: isDark
-              ? 'radial-gradient(circle at center, #06b6d4 0%, #0891b2 20%, rgba(6, 182, 212, 0.6) 40%, transparent 70%)'
+              ? 'radial-gradient(circle at center, #22d3ee 0%, #0891b2 20%, rgba(6, 182, 212, 0.4) 40%, transparent 70%)' // More vibrant cyan
               : 'radial-gradient(circle at center, #67e8f9 0%, #22d3ee 20%, rgba(34, 211, 238, 0.4) 40%, transparent 70%)',
-            filter: 'blur(40px)',
+            filter: 'blur(50px)',
             animation: 'float-1 15s ease-in-out infinite',
-            opacity: isDark ? 0.7 : 0.5,
+            opacity: isDark ? 0.6 : 0.5,
           }}
         />
 
@@ -113,11 +113,11 @@ export const Background: React.FC<BackgroundProps> = ({ isDark }) => {
             width: '800px',
             height: '800px',
             background: isDark
-              ? 'radial-gradient(circle at center, #7c3aed 0%, #6d28d9 20%, rgba(124, 58, 237, 0.6) 40%, transparent 70%)'
+              ? 'radial-gradient(circle at center, #a855f7 0%, #7c3aed 20%, rgba(124, 58, 237, 0.4) 40%, transparent 70%)' // Bright neon purple
               : 'radial-gradient(circle at center, #a78bfa 0%, #8b5cf6 20%, rgba(139, 92, 246, 0.4) 40%, transparent 70%)',
-            filter: 'blur(50px)',
+            filter: 'blur(60px)',
             animation: 'float-2 20s ease-in-out infinite',
-            opacity: isDark ? 0.7 : 0.5,
+            opacity: isDark ? 0.6 : 0.5,
           }}
         />
 
@@ -130,11 +130,11 @@ export const Background: React.FC<BackgroundProps> = ({ isDark }) => {
             width: '600px',
             height: '600px',
             background: isDark
-              ? 'radial-gradient(circle at center, #10b981 0%, #059669 20%, rgba(16, 185, 129, 0.5) 40%, transparent 70%)'
+              ? 'radial-gradient(circle at center, #10b981 0%, #059669 20%, rgba(16, 185, 129, 0.4) 40%, transparent 70%)' // Emerald/Green
               : 'radial-gradient(circle at center, #6ee7b7 0%, #34d399 20%, rgba(52, 211, 153, 0.4) 40%, transparent 70%)',
-            filter: 'blur(45px)',
+            filter: 'blur(55px)',
             animation: 'float-3 25s ease-in-out infinite',
-            opacity: isDark ? 0.6 : 0.4,
+            opacity: isDark ? 0.5 : 0.4,
           }}
         />
       </div>

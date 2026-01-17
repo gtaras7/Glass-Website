@@ -42,14 +42,20 @@ function AppContent({ isDark, toggleTheme }: { isDark: boolean; toggleTheme: () 
 }
 
 function App() {
-  const [isDark, setIsDark] = useState(true);
+  // Initialize theme from localStorage or default to true (dark)
+  const [isDark, setIsDark] = useState(() => {
+    const savedTheme = localStorage.getItem('theme');
+    return savedTheme ? savedTheme === 'dark' : true;
+  });
 
   const toggleTheme = () => {
     setIsDark(!isDark);
   };
 
-  // Sync scrollbar styles when theme changes
+  // Sync scrollbar styles and localStorage when theme changes
   useEffect(() => {
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+
     if (isDark) {
       document.documentElement.classList.add('dark');
       document.documentElement.classList.remove('light');
