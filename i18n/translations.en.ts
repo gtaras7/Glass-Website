@@ -67,11 +67,11 @@ export const en: TranslationKeys = {
   },
   about: {
     title: 'Behind the Screen',
-    paragraph1: 'Hi, I\'m a developer based in Thessaloniki with a Business Computing background. I don\'t just build "pretty" websites; I build systems that work for you.',
-    paragraph2: 'My journey started with a fascination for how businesses operate. Now, I\'m channeling that into mastering ServiceNow and n8n to automate the boring stuff so you can focus on growth.',
-    credential1: 'BSc Business Computing',
-    credential2: 'Tennis & Football Fan 🎾⚽',
-    credential3: 'Future ServiceNow Architect',
+    paragraph1: 'I am a developer based in Thessaloniki with a background in Business Computing. I don\'t just design \'beautiful\' websites; I build smart systems that work on autopilot for you. 🚀',
+    paragraph2: 'My journey started with curiosity about how businesses operate. Today, I turn that knowledge into solutions, using n8n to automate every time-consuming process.',
+    credential1: '🎓 Business Computing Degree',
+    credential2: '🎾⚽ Tennis & Football Fan',
+    credential3: '🤖 n8n & Automation Enthusiast',
   },
   contact: {
     title: 'Let\'s Automate Your Success',

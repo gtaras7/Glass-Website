@@ -46,12 +46,17 @@ export const Contact: React.FC = () => {
                      </p>
 
                      <div className="space-y-4">
-                        <div className="flex items-center gap-4">
-                           <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-white/5 flex items-center justify-center border border-slate-200 dark:border-white/10">
+                        <a
+                           href="google.com/maps/place/Thessaloniki,+Greece/@40.6401,22.9444,17z/data=!4m6!3m5!1s0x14a838f41428e0ed:0x9bae715b8d574a9!8m2!3d40.6400629!4d22.9444191!16zL20vMGIybWM?hl=en-GB&entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoASAFQAw%3D%3D"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           className="flex items-center gap-4 group hover:opacity-80 transition-opacity"
+                        >
+                           <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-white/5 flex items-center justify-center border border-slate-200 dark:border-white/10 group-hover:border-cyan-500/50 transition-colors">
                               <MapPin size={18} className="text-cyan-600 dark:text-cyan-400" />
                            </div>
                            <span className="text-slate-700 dark:text-white/80">{t('contact.location')}</span>
-                        </div>
+                        </a>
                         <div className="flex items-center gap-4">
                            <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-white/5 flex items-center justify-center border border-slate-200 dark:border-white/10">
                               <Mail size={18} className="text-purple-600 dark:text-purple-400" />
@@ -102,8 +107,8 @@ export const Contact: React.FC = () => {
                            type="submit"
                            disabled={isSubmitting || isSent}
                            className={`w-full py-4 rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg transition-all transform hover:-translate-y-1 ${isSent
-                                 ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-green-900/20'
-                                 : 'bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white shadow-blue-900/20 dark:shadow-blue-900/50'
+                              ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-green-900/20'
+                              : 'bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white shadow-blue-900/20 dark:shadow-blue-900/50'
                               } ${isSubmitting ? 'opacity-80 cursor-wait' : ''}`}
                         >
                            {isSent ? (

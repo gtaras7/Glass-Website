@@ -17,11 +17,6 @@ export const Services: React.FC = () => {
       title: t('services.automation.title'),
       description: t('services.automation.description'),
     },
-    {
-      icon: TrendingUp,
-      title: t('services.business.title'),
-      description: t('services.business.description'),
-    }
   ];
 
   return (
@@ -36,7 +31,7 @@ export const Services: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {services.map((service, index) => (
             <GlassCard key={index} tilt className="min-h-[300px] p-8 flex flex-col group">
               <div className="w-14 h-14 rounded-2xl bg-cyan-50 dark:bg-white/5 border border-cyan-100 dark:border-white/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
