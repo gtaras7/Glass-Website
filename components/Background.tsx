@@ -83,7 +83,8 @@ export const Background: React.FC<BackgroundProps> = ({ isDark }) => {
   }, []);
 
   return (
-    <div className="fixed inset-0 overflow-hidden bg-slate-50 dark:bg-[#050511] transition-colors duration-500" style={{ zIndex: 0 }}>
+
+    <div className="fixed inset-0 overflow-hidden bg-[#050511] transition-colors duration-500" style={{ zIndex: 0 }}>
       {/* Aurora Background Orbs Container */}
       <div className="absolute inset-0 overflow-hidden" style={{ zIndex: 1 }}>
 
@@ -95,12 +96,10 @@ export const Background: React.FC<BackgroundProps> = ({ isDark }) => {
             left: '-5%',
             width: '700px',
             height: '700px',
-            background: isDark
-              ? 'radial-gradient(circle at center, #22d3ee 0%, #0891b2 20%, rgba(6, 182, 212, 0.4) 40%, transparent 70%)' // More vibrant cyan
-              : 'radial-gradient(circle at center, #67e8f9 0%, #22d3ee 20%, rgba(34, 211, 238, 0.4) 40%, transparent 70%)',
+            background: 'radial-gradient(circle at center, #22d3ee 0%, #0891b2 20%, rgba(6, 182, 212, 0.4) 40%, transparent 70%)', // More vibrant cyan
             filter: 'blur(50px)',
             animation: 'float-1 15s ease-in-out infinite',
-            opacity: isDark ? 0.6 : 0.5,
+            opacity: 0.6,
           }}
         />
 
@@ -112,12 +111,10 @@ export const Background: React.FC<BackgroundProps> = ({ isDark }) => {
             right: '-5%',
             width: '800px',
             height: '800px',
-            background: isDark
-              ? 'radial-gradient(circle at center, #a855f7 0%, #7c3aed 20%, rgba(124, 58, 237, 0.4) 40%, transparent 70%)' // Bright neon purple
-              : 'radial-gradient(circle at center, #a78bfa 0%, #8b5cf6 20%, rgba(139, 92, 246, 0.4) 40%, transparent 70%)',
+            background: 'radial-gradient(circle at center, #a855f7 0%, #7c3aed 20%, rgba(124, 58, 237, 0.4) 40%, transparent 70%)', // Bright neon purple
             filter: 'blur(60px)',
             animation: 'float-2 20s ease-in-out infinite',
-            opacity: isDark ? 0.6 : 0.5,
+            opacity: 0.6,
           }}
         />
 
@@ -129,12 +126,10 @@ export const Background: React.FC<BackgroundProps> = ({ isDark }) => {
             left: '25%',
             width: '600px',
             height: '600px',
-            background: isDark
-              ? 'radial-gradient(circle at center, #10b981 0%, #059669 20%, rgba(16, 185, 129, 0.4) 40%, transparent 70%)' // Emerald/Green
-              : 'radial-gradient(circle at center, #6ee7b7 0%, #34d399 20%, rgba(52, 211, 153, 0.4) 40%, transparent 70%)',
+            background: 'radial-gradient(circle at center, #10b981 0%, #059669 20%, rgba(16, 185, 129, 0.4) 40%, transparent 70%)', // Emerald/Green
             filter: 'blur(55px)',
             animation: 'float-3 25s ease-in-out infinite',
-            opacity: isDark ? 0.5 : 0.4,
+            opacity: 0.5,
           }}
         />
       </div>
@@ -144,7 +139,7 @@ export const Background: React.FC<BackgroundProps> = ({ isDark }) => {
         ref={canvasRef}
         className={`absolute top-0 left-0 w-full h-full pointer-events-none transition-opacity duration-500`}
         style={{
-          opacity: isDark ? 0.15 : 0.08,
+          opacity: 0.15,
           mixBlendMode: 'overlay',
           zIndex: 2,
         }}

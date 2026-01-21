@@ -40,8 +40,8 @@ export const Contact: React.FC = () => {
                <div className="grid md:grid-cols-2 gap-12">
                   {/* Info */}
                   <div>
-                     <h2 className="text-3xl font-display font-bold mb-6 text-slate-800 dark:text-white">{t('contact.title')}</h2>
-                     <p className="text-slate-600 dark:text-white/60 mb-8">
+                     <h2 className="text-3xl font-display font-bold mb-6 text-white">{t('contact.title')}</h2>
+                     <p className="text-white/60 mb-8">
                         {t('contact.description')}
                      </p>
 
@@ -55,13 +55,13 @@ export const Contact: React.FC = () => {
                            <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-white/5 flex items-center justify-center border border-slate-200 dark:border-white/10 group-hover:border-cyan-500/50 transition-colors">
                               <MapPin size={18} className="text-cyan-600 dark:text-cyan-400" />
                            </div>
-                           <span className="text-slate-700 dark:text-white/80">{t('contact.location')}</span>
+                           <span className="text-white/80">{t('contact.location')}</span>
                         </a>
                         <div className="flex items-center gap-4">
                            <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-white/5 flex items-center justify-center border border-slate-200 dark:border-white/10">
                               <Mail size={18} className="text-purple-600 dark:text-purple-400" />
                            </div>
-                           <span className="text-slate-700 dark:text-white/80">nextgenautomationn@gmail.com</span>
+                           <span className="text-white/80">nextgenautomationn@gmail.com</span>
                         </div>
                      </div>
                   </div>
@@ -69,33 +69,33 @@ export const Contact: React.FC = () => {
                   {/* Form */}
                   <form className="space-y-4" onSubmit={handleSubmit}>
                      <div>
-                        <label className="block text-xs font-medium text-slate-500 dark:text-white/50 mb-1 ml-1">{t('contact.nameLabel')}</label>
+                        <label className="block text-xs font-medium text-white/50 mb-1 ml-1">{t('contact.nameLabel')}</label>
                         <input
                            type="text"
                            name="name"
-                           className="w-full bg-slate-50 dark:bg-black/20 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-white/30 focus:outline-none focus:border-cyan-500/50 focus:bg-white dark:focus:bg-black/40 transition-all shadow-inner"
+                           className="w-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-cyan-500/50 focus:bg-white/10 transition-all shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)] hover:border-white/20"
                            placeholder={t('contact.namePlaceholder')}
                            required
                            disabled={isSubmitting || isSent}
                         />
                      </div>
                      <div>
-                        <label className="block text-xs font-medium text-slate-500 dark:text-white/50 mb-1 ml-1">{t('contact.emailLabel')}</label>
+                        <label className="block text-xs font-medium text-white/50 mb-1 ml-1">{t('contact.emailLabel')}</label>
                         <input
                            type="email"
                            name="email"
-                           className="w-full bg-slate-50 dark:bg-black/20 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-white/30 focus:outline-none focus:border-cyan-500/50 focus:bg-white dark:focus:bg-black/40 transition-all shadow-inner"
+                           className="w-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-cyan-500/50 focus:bg-white/10 transition-all shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)] hover:border-white/20"
                            placeholder={t('contact.emailPlaceholder')}
                            required
                            disabled={isSubmitting || isSent}
                         />
                      </div>
                      <div>
-                        <label className="block text-xs font-medium text-slate-500 dark:text-white/50 mb-1 ml-1">{t('contact.messageLabel')}</label>
+                        <label className="block text-xs font-medium text-white/50 mb-1 ml-1">{t('contact.messageLabel')}</label>
                         <textarea
                            name="message"
                            rows={4}
-                           className="w-full bg-slate-50 dark:bg-black/20 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-white/30 focus:outline-none focus:border-cyan-500/50 focus:bg-white dark:focus:bg-black/40 transition-all shadow-inner resize-none"
+                           className="w-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-cyan-500/50 focus:bg-white/10 transition-all shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)] hover:border-white/20 resize-none"
                            placeholder={t('contact.messagePlaceholder')}
                            required
                            disabled={isSubmitting || isSent}

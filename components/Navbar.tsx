@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Moon, Sun, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useLanguage } from '../hooks/useLanguage';
 
 interface NavbarProps {
@@ -40,9 +40,9 @@ export const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
         className="
           hidden md:flex pointer-events-auto
           items-center gap-6 px-8 py-4
-          bg-white/70 dark:bg-white/10 backdrop-blur-md 
-          border border-slate-200 dark:border-white/20 
-          rounded-full shadow-lg dark:shadow-none
+          bg-white/10 backdrop-blur-md 
+          border border-white/20 
+          rounded-full shadow-none
           transition-colors duration-500
         "
       >
@@ -53,8 +53,8 @@ export const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
             onClick={(e) => handleClick(e, link.href)}
             className="
               relative px-3 py-1 text-sm font-medium
-              text-slate-600 dark:text-white/80
-              transition-colors hover:text-slate-900 dark:hover:text-white
+              text-white/80
+              transition-colors hover:text-white
               group cursor-pointer
             "
           >
@@ -63,15 +63,7 @@ export const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
           </a>
         ))}
 
-        <div className="w-px h-4 bg-slate-300 dark:bg-white/20" />
 
-        <button
-          onClick={toggleTheme}
-          className="p-1.5 rounded-full bg-slate-100 dark:bg-white/10 text-slate-600 dark:text-white hover:scale-110 transition-all active:scale-95 cursor-pointer"
-          aria-label="Toggle Theme"
-        >
-          {isDark ? <Sun size={16} /> : <Moon size={16} />}
-        </button>
 
         <div className="w-px h-4 bg-slate-300 dark:bg-white/20" />
 
@@ -92,9 +84,9 @@ export const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
           onClick={() => setIsOpen(true)}
           className="
             p-3 rounded-full 
-            bg-white/70 dark:bg-white/10 backdrop-blur-md 
-            border border-slate-200 dark:border-white/20 
-            text-slate-900 dark:text-white 
+            bg-white/10 backdrop-blur-md 
+            border border-white/20 
+            text-white 
             shadow-lg
           "
         >
@@ -111,8 +103,8 @@ export const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
             exit={{ opacity: 0, y: -20 }}
             className="
               absolute top-20 left-4 right-4 
-              bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl
-              border border-slate-200 dark:border-white/20
+              bg-slate-900/95 backdrop-blur-xl
+              border border-white/20
               rounded-2xl shadow-2xl p-6
               pointer-events-auto md:hidden
               flex flex-col gap-6
@@ -147,19 +139,7 @@ export const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
               ))}
             </div>
 
-            <div className="flex items-center justify-between pt-4 border-t border-slate-200 dark:border-white/10">
-              <div className="flex items-center gap-4">
-                <button
-                  onClick={toggleTheme}
-                  className="p-3 rounded-xl bg-slate-50 dark:bg-white/5 text-slate-600 dark:text-white hover:scale-105 transition-all"
-                >
-                  {isDark ? <Sun size={20} /> : <Moon size={20} />}
-                </button>
-                <span className="text-sm font-medium text-slate-500 dark:text-white/50">
-                  {isDark ? 'Light Mode' : 'Dark Mode'}
-                </span>
-              </div>
-
+            <div className="flex items-center justify-end pt-4 border-t border-slate-200 dark:border-white/10">
               <button
                 onClick={toggleLanguage}
                 className="px-4 py-2 rounded-xl bg-slate-50 dark:bg-white/5 text-slate-900 dark:text-white font-bold hover:scale-105 transition-all"

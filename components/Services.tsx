@@ -37,8 +37,8 @@ export const Services: React.FC = () => {
               <div className="w-14 h-14 rounded-2xl bg-cyan-50 dark:bg-white/5 border border-cyan-100 dark:border-white/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <service.icon className="w-7 h-7 text-cyan-600 dark:text-cyan-400" />
               </div>
-              <h3 className="text-xl font-bold mb-4 text-slate-800 dark:text-white">{service.title}</h3>
-              <p className="text-slate-600 dark:text-white/60 leading-relaxed">
+              <h3 className="text-xl font-bold mb-4 text-white">{service.title}</h3>
+              <p className="text-blue-100/80 leading-relaxed">
                 {service.description}
               </p>
             </GlassCard>

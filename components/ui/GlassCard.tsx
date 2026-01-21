@@ -70,12 +70,12 @@ export const GlassCard: React.FC<GlassCardProps> = ({
       whileHover={hoverEffect ? { scale: 1.02 } : {}}
       className={`
         relative overflow-hidden
-        bg-white/90 dark:bg-white/5
-        backdrop-blur-[12px] 
-        border border-slate-200 dark:border-white/20 
-        shadow-[0_8px_32px_0_rgba(31,38,135,0.15)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.36)]
+        bg-gradient-to-br from-[#7c3aed]/40 to-[#059669]/40
+        backdrop-blur-xl
+        border border-white/10
+        shadow-[0_8px_32px_0_rgba(0,0,0,0.36)]
         rounded-2xl
-        transition-colors duration-500
+        transition-all duration-500
         ${className}
       `}
     >

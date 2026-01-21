@@ -42,28 +42,15 @@ function AppContent({ isDark, toggleTheme }: { isDark: boolean; toggleTheme: () 
 }
 
 function App() {
-  // Initialize theme from localStorage or default to true (dark)
-  const [isDark, setIsDark] = useState(() => {
-    const savedTheme = localStorage.getItem('theme');
-    return savedTheme ? savedTheme === 'dark' : true;
-  });
+  const isDark = true;
+  const toggleTheme = () => { }; // No-op
 
-  const toggleTheme = () => {
-    setIsDark(!isDark);
-  };
-
-  // Sync scrollbar styles and localStorage when theme changes
+  // Enforce dark mode class on mount
   useEffect(() => {
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-
-    if (isDark) {
-      document.documentElement.classList.add('dark');
-      document.documentElement.classList.remove('light');
-    } else {
-      document.documentElement.classList.remove('dark');
-      document.documentElement.classList.add('light');
-    }
-  }, [isDark]);
+    document.documentElement.classList.add('dark');
+    document.documentElement.classList.remove('light');
+    localStorage.setItem('theme', 'dark');
+  }, []);
 
   return (
     <LanguageProvider>
