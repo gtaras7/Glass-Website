@@ -117,7 +117,11 @@ export const Portfolio: React.FC = () => {
               className="grid md:grid-cols-2 lg:grid-cols-2 gap-8"
             >
               {webProjects.map((project) => (
-                <GlassCard key={project.id} className="group">
+                <GlassCard
+                  key={project.id}
+                  className="group cursor-pointer"
+                  onClick={() => project.link && window.open(project.link, '_blank')}
+                >
                   <div className="h-48 overflow-hidden relative">
                     <img
                       src={project.image}
@@ -129,6 +133,7 @@ export const Portfolio: React.FC = () => {
                         href={project.link || '#'}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
                         className="px-6 py-2 bg-white text-black rounded-full font-bold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform hover:bg-cyan-100 transition-colors"
                       >
                         {t('portfolio.visitSite')} <ExternalLink size={16} />
