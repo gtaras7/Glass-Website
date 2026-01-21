@@ -46,21 +46,26 @@ export const Hero: React.FC = () => {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="flex flex-wrap gap-4"
           >
-            <a
+            <motion.a
               href="#portfolio"
               onClick={scrollToPortfolio}
+              whileHover={{
+                y: -4,
+                transition: { duration: 0.2, ease: "easeOut" }
+              }}
               className="
                 group relative px-8 py-4 rounded-xl 
-                bg-cyan-600/10 dark:bg-white/10 backdrop-blur-md 
-                border border-cyan-600/20 dark:border-white/20
-                text-cyan-800 dark:text-white font-semibold flex items-center gap-3
-                hover:bg-cyan-600/20 dark:hover:bg-white/20 transition-all 
-                shadow-[0_0_20px_rgba(56,189,248,0.1)] dark:shadow-[0_0_20px_rgba(56,189,248,0.3)] cursor-pointer
+                bg-white/5 backdrop-blur-md 
+                border border-white/20
+                text-white font-semibold flex items-center gap-3 w-fit
+                hover:bg-white/10 hover:border-cyan-400/50 transition-all duration-300
+                shadow-[0_8px_32px_rgba(34,211,238,0.15)] hover:shadow-[0_12px_40px_rgba(34,211,238,0.3)]
+                cursor-pointer
               "
             >
               {t('hero.cta')}
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
+            </motion.a>
           </motion.div>
         </div>
 

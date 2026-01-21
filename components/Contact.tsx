@@ -15,7 +15,7 @@ export const Contact: React.FC = () => {
       const formData = new FormData(e.currentTarget);
 
       try {
-         const response = await fetch("https://formsubmit.co/ajax/nextgenautomationn@gmail.com", {
+         const response = await fetch("https://formsubmit.co/ajax/gftarasidis@gmail.com", {
             method: "POST",
             body: formData
          });
@@ -61,7 +61,7 @@ export const Contact: React.FC = () => {
                            <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-white/5 flex items-center justify-center border border-slate-200 dark:border-white/10">
                               <Mail size={18} className="text-purple-600 dark:text-purple-400" />
                            </div>
-                           <span className="text-white/80">nextgenautomationn@gmail.com</span>
+                           <span className="text-white/80">gftarasidis@gmail.com</span>
                         </div>
                      </div>
                   </div>
