@@ -72,6 +72,10 @@ export interface TranslationKeys {
       title: string;
       description: string;
     };
+    cocaCola: {
+      title: string;
+      description: string;
+    };
   };
   about: {
     title: string;

@@ -45,6 +45,15 @@ export const Portfolio: React.FC = () => {
       image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop',
       technologies: ['React', 'Netlify', 'Tailwind'],
       link: 'https://eaconstructions.netlify.app/'
+    },
+    {
+      id: '5',
+      title: t('portfolio.cocaCola.title'),
+      description: t('portfolio.cocaCola.description'),
+      category: 'web',
+      image: 'https://images.unsplash.com/photo-1554866585-cd94860890b7?q=80&w=2065&auto=format&fit=crop',
+      technologies: ['React', 'Scroll Animation', 'Canvas'],
+      link: 'https://animatedcocacola.netlify.app/'
     }
   ];
 

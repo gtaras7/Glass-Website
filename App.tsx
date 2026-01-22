@@ -33,7 +33,7 @@ function AppContent({ isDark, toggleTheme }: { isDark: boolean; toggleTheme: () 
           </main>
 
           <footer className="py-8 text-center text-slate-500 dark:text-white/20 text-sm border-t border-slate-200 dark:border-white/5 transition-colors duration-500">
-            <p>© {new Date().getFullYear()} NextGen Automation. {t('footer.tagline')}</p>
+            <p>© {new Date().getFullYear()} NextGen Automation</p>
           </footer>
         </div>
       </div>

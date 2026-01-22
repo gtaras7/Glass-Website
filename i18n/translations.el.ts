@@ -72,6 +72,10 @@ export const el: TranslationKeys = {
       title: 'EA Constructions',
       description: 'Επαγγελματική ιστοσελίδα χαρτοφυλακίου για κατασκευαστική εταιρεία, παρουσιάζοντας έργα και υπηρεσίες με καθαρό, εταιρικό σχεδιασμό.',
     },
+    cocaCola: {
+      title: 'Coca-Cola',
+      description: 'Demo ιστοσελίδα για επιδεικτικούς σκοπούς με καθηλωτικά scroll-driven canvas animations και σύγχρονες τεχνικές web design.',
+    },
   },
   about: {
     title: 'Πίσω από την Οθόνη',

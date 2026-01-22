@@ -72,6 +72,10 @@ export const en: TranslationKeys = {
       title: 'EA Constructions',
       description: 'Professional portfolio website for a construction company, showcasing projects and services with a clean, corporate design.',
     },
+    cocaCola: {
+      title: 'Coca-Cola',
+      description: 'Demo website for demonstration purposes featuring immersive scroll-driven canvas animations and modern web design techniques.',
+    },
   },
   about: {
     title: 'Behind the Screen',
