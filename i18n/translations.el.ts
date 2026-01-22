@@ -76,6 +76,10 @@ export const el: TranslationKeys = {
       title: 'Coca-Cola',
       description: 'Demo ιστοσελίδα για επιδεικτικούς σκοπούς με καθηλωτικά scroll-driven canvas animations και σύγχρονες τεχνικές web design.',
     },
+    thouDesign: {
+      title: 'Thou Design',
+      description: 'Δημιουργικό portfolio σχεδιασμού που παρουσιάζει καινοτόμες οπτικές ιδέες και εργασίες branding με σύγχρονη, μινιμαλιστική αισθητική.',
+    },
   },
   about: {
     title: 'Πίσω από την Οθόνη',

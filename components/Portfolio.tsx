@@ -54,6 +54,15 @@ export const Portfolio: React.FC = () => {
       image: 'https://images.unsplash.com/photo-1554866585-cd94860890b7?q=80&w=2065&auto=format&fit=crop',
       technologies: ['React', 'Scroll Animation', 'Canvas'],
       link: 'https://animatedcocacola.netlify.app/'
+    },
+    {
+      id: '6',
+      title: t('portfolio.thouDesign.title'),
+      description: t('portfolio.thouDesign.description'),
+      category: 'web',
+      image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2064&auto=format&fit=crop',
+      technologies: ['React', 'Design', 'Portfolio'],
+      link: 'https://thoudesigns.netlify.app/'
     }
   ];
 

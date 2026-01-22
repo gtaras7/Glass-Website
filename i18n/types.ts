@@ -76,6 +76,10 @@ export interface TranslationKeys {
       title: string;
       description: string;
     };
+    thouDesign: {
+      title: string;
+      description: string;
+    };
   };
   about: {
     title: string;

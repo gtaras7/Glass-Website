@@ -76,6 +76,10 @@ export const en: TranslationKeys = {
       title: 'Coca-Cola',
       description: 'Demo website for demonstration purposes featuring immersive scroll-driven canvas animations and modern web design techniques.',
     },
+    thouDesign: {
+      title: 'Thou Design',
+      description: 'Creative design portfolio showcasing innovative visual concepts and branding work with a modern, minimalist aesthetic.',
+    },
   },
   about: {
     title: 'Behind the Screen',
