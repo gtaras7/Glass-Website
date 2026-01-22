@@ -31,8 +31,12 @@
 }
 
 /* Base styles */
+html,
 body {
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #050511; /* Dark theme background */
 }
 
 /* Custom Scrollbar - Dark Mode Default */

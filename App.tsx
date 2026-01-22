@@ -17,7 +17,7 @@ function AppContent({ isDark, toggleTheme }: { isDark: boolean; toggleTheme: () 
 
   return (
     <div className={isDark ? 'dark' : ''}>
-      <div className="relative font-sans antialiased text-slate-900 dark:text-white selection:bg-cyan-500/30 transition-colors duration-500 min-h-screen">
+      <div className="relative font-sans antialiased text-slate-900 dark:text-white selection:bg-cyan-500/30 transition-colors duration-500 min-h-[100dvh] bg-[#050511]">
         <Cursor />
         <Background isDark={isDark} />
 
