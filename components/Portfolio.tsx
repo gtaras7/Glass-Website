@@ -74,6 +74,32 @@ export const Portfolio: React.FC = () => {
       },
       technologies: ['Gmail', 'OpenAI', 'Google Sheets'],
       link: 'https://n8n.io/workflows/11290-financial-document-extraction-from-gmail-to-google-sheets/'
+    },
+    {
+      id: 'n3',
+      title: t('portfolio.expenseLogging.title'),
+      description: t('portfolio.expenseLogging.description'),
+      category: 'n8n',
+      stats: {
+        hoursSaved: 15,
+        lastRun: '1 hour ago',
+        nodes: 7
+      },
+      technologies: ['Telegram', 'Google Sheets'],
+      link: 'https://n8n.io/workflows/8268-expense-logging-with-telegram-and-google-sheets/'
+    },
+    {
+      id: 'n4',
+      title: t('portfolio.hotelBooking.title'),
+      description: t('portfolio.hotelBooking.description'),
+      category: 'n8n',
+      stats: {
+        hoursSaved: 40,
+        lastRun: '30 mins ago',
+        nodes: 11
+      },
+      technologies: ['Gmail', 'GPT-4o-mini', 'Google Sheets'],
+      link: 'https://n8n.io/workflows/10578-automate-hotel-booking-requests-from-gmail-to-google-sheets-with-gpt-5-mini/'
     }
   ];
 

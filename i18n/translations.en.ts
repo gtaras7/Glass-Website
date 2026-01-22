@@ -56,6 +56,14 @@ export const en: TranslationKeys = {
       title: 'Financial Doc Extraction',
       description: 'Automatically extracts key financial data from incoming Gmail attachments and organizes it into Google Sheets.',
     },
+    expenseLogging: {
+      title: 'Expense Logging',
+      description: 'Track and log expenses effortlessly via Telegram bot, automatically organizing data in Google Sheets for easy financial management.',
+    },
+    hotelBooking: {
+      title: 'Hotel Booking Automation',
+      description: 'Automatically extracts and organizes hotel booking requests from Gmail into Google Sheets using GPT-4o-mini for intelligent data parsing.',
+    },
     rollySkg: {
       title: 'Rolly SKG',
       description: 'A modern, vibrant website for a local food brand, featuring a clean product showcase and brand storytelling.',

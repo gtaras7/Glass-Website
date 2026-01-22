@@ -56,6 +56,14 @@ export interface TranslationKeys {
       title: string;
       description: string;
     };
+    expenseLogging: {
+      title: string;
+      description: string;
+    };
+    hotelBooking: {
+      title: string;
+      description: string;
+    };
     rollySkg: {
       title: string;
       description: string;
