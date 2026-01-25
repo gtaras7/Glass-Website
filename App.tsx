@@ -21,14 +21,14 @@ function AppContent({ isDark, toggleTheme }: { isDark: boolean; toggleTheme: () 
 
   return (
     <div className={isDark ? 'dark' : ''}>
-      <div className="relative font-sans antialiased text-slate-900 dark:text-white selection:bg-cyan-500/30 transition-colors duration-500 min-h-[100dvh] bg-[#050511]">
+      <div className="relative font-sans antialiased text-slate-900 dark:text-white selection:bg-cyan-500/30 transition-colors duration-500 min-h-[100dvh] bg-[#050511] flex flex-col w-full max-w-[100vw] overflow-x-hidden">
         <Cursor />
         <Background isDark={isDark} />
 
-        <div className="relative" style={{ zIndex: 10 }}>
+        <div className="relative flex-1 flex flex-col w-full" style={{ zIndex: 10 }}>
           <Navbar isDark={isDark} toggleTheme={toggleTheme} />
 
-          <main className="flex flex-col">
+          <main className="flex flex-col flex-1 w-full">
             <Hero />
             <Services />
             <Portfolio />
@@ -36,7 +36,7 @@ function AppContent({ isDark, toggleTheme }: { isDark: boolean; toggleTheme: () 
             <Contact />
           </main>
 
-          <footer className="py-8 text-center text-slate-500 dark:text-white/20 text-sm border-t border-slate-200 dark:border-white/5 transition-colors duration-500">
+          <footer className="py-8 text-center text-slate-500 dark:text-white/20 text-sm border-t border-slate-200 dark:border-white/5 transition-colors duration-500 w-full">
             <p>© {new Date().getFullYear()} NextGen Automation</p>
           </footer>
         </div>

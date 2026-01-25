@@ -30,20 +30,59 @@
     }
 }
 
-/* Base styles */
+/* Base styles - Mobile Full-Bleed Layout */
 html {
     overflow-x: hidden;
+    overflow-y: auto;
     scroll-behavior: smooth;
     /* Fallback for JS-disabled scenarios */
-}
-
-html,
-body {
-    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
     margin: 0;
     padding: 0;
+    /* Support for dynamic viewport height on mobile browsers */
+    min-height: 100vh;
+    min-height: 100dvh;
+    /* Dynamic Viewport Height - accounts for mobile toolbars */
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100vw;
+    min-height: 100vh;
+    min-height: 100dvh;
+    /* Dynamic Viewport Height */
     background-color: #050511;
     /* Dark theme background */
+    position: relative;
+}
+
+/* Root container ensures proper flex layout */
+#root {
+    width: 100%;
+    max-width: 100vw;
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Prevent any child elements from causing horizontal overflow */
+* {
+    max-width: 100%;
+}
+
+/* Allow images and videos to overflow their containers if needed, but not the viewport */
+img,
+video,
+canvas {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Custom Scrollbar - Dark Mode Default */

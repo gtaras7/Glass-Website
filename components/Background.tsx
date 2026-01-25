@@ -84,9 +84,9 @@ export const Background: React.FC<BackgroundProps> = ({ isDark }) => {
 
   return (
 
-    <div className="fixed inset-0 overflow-hidden bg-[#050511] transition-colors duration-500" style={{ zIndex: 0 }}>
+    <div className="fixed inset-0 w-full h-full overflow-hidden bg-[#050511] transition-colors duration-500" style={{ zIndex: 0, minHeight: '100dvh' }}>
       {/* Aurora Background Orbs Container */}
-      <div className="absolute inset-0 overflow-hidden" style={{ zIndex: 1 }}>
+      <div className="absolute inset-0 w-full h-full overflow-hidden" style={{ zIndex: 1 }}>
 
         {/* ORB 1: Cyan/Electric Blue - Top Left */}
         <div
