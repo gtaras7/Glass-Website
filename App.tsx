@@ -10,10 +10,14 @@ import { Cursor } from './components/ui/Cursor';
 import { LanguageProvider } from './contexts/LanguageContext';
 import { useLanguage } from './hooks/useLanguage';
 import { useMetaTags } from './hooks/useMetaTags';
+import { useSmoothScroll } from './hooks/useSmoothScroll';
 
 function AppContent({ isDark, toggleTheme }: { isDark: boolean; toggleTheme: () => void }) {
   const { language, t } = useLanguage();
   useMetaTags(language);
+
+  // Initialize smooth scrolling
+  const { scrollTo } = useSmoothScroll();
 
   return (
     <div className={isDark ? 'dark' : ''}>

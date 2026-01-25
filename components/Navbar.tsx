@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { useLanguage } from '../hooks/useLanguage';
+import { useSmoothScroll } from '../hooks/useSmoothScroll';
 
 interface NavbarProps {
   isDark: boolean;
@@ -11,6 +12,7 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
   const { language, toggleLanguage, t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
+  const { scrollTo } = useSmoothScroll();
 
   const links = [
     { name: 'home', href: '#home' },
@@ -25,7 +27,7 @@ export const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
     const targetId = href.replace('#', '');
     const element = document.getElementById(targetId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      scrollTo(element, { duration: 1.2 });
       setIsOpen(false);
     }
   };

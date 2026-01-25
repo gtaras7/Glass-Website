@@ -3,14 +3,17 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Code2, Cpu } from 'lucide-react';
 import { GlassCard } from './ui/GlassCard';
 import { useLanguage } from '../hooks/useLanguage';
+import { useSmoothScroll } from '../hooks/useSmoothScroll';
 
 export const Hero: React.FC = () => {
   const { t } = useLanguage();
+  const { scrollTo } = useSmoothScroll();
+
   const scrollToPortfolio = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const element = document.getElementById('portfolio');
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      scrollTo(element, { duration: 1.2 });
     }
   };
 

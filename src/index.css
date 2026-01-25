@@ -31,12 +31,19 @@
 }
 
 /* Base styles */
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    /* Fallback for JS-disabled scenarios */
+}
+
 html,
 body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-    background-color: #050511; /* Dark theme background */
+    background-color: #050511;
+    /* Dark theme background */
 }
 
 /* Custom Scrollbar - Dark Mode Default */
@@ -128,4 +135,18 @@ body {
         width: 200px !important;
         height: 200px !important;
     }
+}
+
+/* GPU Acceleration for Smooth Scrolling */
+/* Optimize elements with blur/filter effects for better scroll performance */
+.orb,
+[class*="rounded-full"][style*="blur"],
+[style*="filter: blur"] {
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+}
+
+/* Force hardware acceleration on animated elements */
+[style*="animation"] {
+    will-change: transform;
 }

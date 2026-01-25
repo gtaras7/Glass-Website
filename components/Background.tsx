@@ -100,6 +100,7 @@ export const Background: React.FC<BackgroundProps> = ({ isDark }) => {
             filter: 'blur(50px)',
             animation: 'float-1 15s ease-in-out infinite',
             opacity: 0.6,
+            willChange: 'transform',
           }}
         />
 
@@ -115,6 +116,7 @@ export const Background: React.FC<BackgroundProps> = ({ isDark }) => {
             filter: 'blur(60px)',
             animation: 'float-2 20s ease-in-out infinite',
             opacity: 0.6,
+            willChange: 'transform',
           }}
         />
 
@@ -130,6 +132,7 @@ export const Background: React.FC<BackgroundProps> = ({ isDark }) => {
             filter: 'blur(55px)',
             animation: 'float-3 25s ease-in-out infinite',
             opacity: 0.5,
+            willChange: 'transform',
           }}
         />
       </div>
